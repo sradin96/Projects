@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css?family=VT323");
+            
+::selection {color:#FFFFFF; background:transparent;}
+::-moz-selection {color:#FFFFFF; background:transparent;}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+canvas{
+    position: relative;
+    top: 120px;
+    margin:auto;
+    border-style: solid;
+    border-width: 10px;
+    border-color: yellowgreen;
+}
+h1{
+    position: absolute;
+    top: 2%;
+    right: 48%;
+    display: inline;
+    width: 100px;
+    font-size: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFFFFF;
+}
+
+h2{
+    position: absolute;
+    top: 15%;
+    right: 48%;
+    display: inline;
+    width: 100px;
+    font-size: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFFFFF;
+}
+
+.btn{
+    position: relative;
+    top: 0%;
+}
+
+.score{
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    right: 57%;    
+    width: 240px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+#menu{
+    display: inline-block;
+    width: 400px;
+    padding-top: 95px;
+    padding-bottom: 95px;
+    font-size: 40px;
+    text-align: center;
+    color: #FFF;
+}
+
+#gameover{
+    display: none;
+    padding-top: 95px;
+    padding-bottom: 95px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 30px;
+    color: #FFF;
+    
+}
+#gameover p{
+    position: absolute;
+    top: 38%;
+    right: 43%;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#menu p{
+    position: absolute;
+    top: 30%;
+    right: 44.5%;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 46.5%;
+    top: 50%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.correctQbutton{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 47.5%;
+    top: 60%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wrongQbutton{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 47.5%;
+    top: 60%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+a{
+    position: absolute;
+    right: 45.5%;
+    top: 30%;
+}
+span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 46.5%;
+    top: 50%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.qbutton{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 47.5%;
+    top: 60%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.q{
+    color: #FFF;
+    position: absolute;
+    top: 38%;
+    right: 46%;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.c{
+    color: #FFF;
+    position: absolute;
+    top: 38%;
+    right: 49%;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.i{
+    color: #FFF;
+    position: absolute;
+    top: 45%;
+    right: 46%;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wq{
+    color: #FFF;
+    position: absolute;
+    top: 38%;
+    right: 43%;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.input{
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+}

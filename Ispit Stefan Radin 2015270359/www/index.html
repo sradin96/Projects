@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+    <title>Pupa Parfimerija</title>
+    <link rel="icon" href="img/pupaBackground.jpg">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+</head>
+<body ng-app="myApp" ng-controller="MyCtrl as vm">
+    
+
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark unique-color-dark">
+        <a class="navbar-brand" href="index.html">Pupa Parfimerija</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+          aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Početna
+              </a>
+            </li>
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">Proizvodi
+              </a>
+              <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                <a class="dropdown-item" href="parfemi.html">Parfemi</a>
+                <a class="dropdown-item" href="sminka.html">Šminka</a>
+                <a class="dropdown-item" href="kozmetika.html">Kozmetika</a>
+           <a class="dropdown-item" href="naocare.html">Naočare</a> 
+                <a class="dropdown-item" href="satovinakit.html">Satovi i Nakit</a>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <a class="nav-link" data-toggle="modal" data-target="#cartModal"><i class="fas fa-shopping-cart white-text" ></i>
+              <i class="korpa white-text" >{{vm.korpa}}</i></a>
+              <a class="nav-link" ng-click="vm.izlogujSe()" ng-show="vm.ulogovan">Izlogujte se</a>
+            <li class="nav-item dropdown" ng-hide="vm.ulogovan">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fas fa-user"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalLoginForm">Ulogujte se</a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalRegisterForm">Registracija</a>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+      <section class="text-center mb-4">
+
+        <div class="row wow fadeIn" >
+
+          <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="card">
+
+              <div class="view overlay" data-toggle="modal" data-target="#centralModalSuccess1" >
+                <img src="img/boss-bottled-night.jpg" class="card-img-top" alt="">
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <div class="card-body text-center">
+
+                <a href="" class="grey-text">
+                  <h5>Parfem</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Hugo Boss Bottled Night
+                      <span class="badge badge-pill danger-color">NOVO</span>
+                    </a>
+                  </strong>
+                </h5>
+
+                <h4 class="font-weight-bold blue-text">
+                  <strong>5500 rsd</strong>
+                </h4>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="card">
+
+              <div class="view overlay" data-toggle="modal" data-target="#centralModalSuccess2">
+                <img src="img/boss-bottled-unlimited.jpg" class="card-img-top" alt="">
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <div class="card-body text-center">
+
+                <a href="" class="grey-text">
+                  <h5>Parfem</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Hugo Boss Unlimited</a>
+                  </strong>
+                </h5>
+
+                <h4 class="font-weight-bold blue-text">
+                  <strong>4990 rsd</strong>
+                </h4>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="card">
+
+              <div class="view overlay" data-toggle="modal" data-target="#centralModalSuccess3">
+                <img src="img/boss-the-scent.jpg" class="card-img-top" alt="">
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <div class="card-body text-center">
+
+                <a href="" class="grey-text">
+                  <h5>Parfem</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Hugo Boss The Scent
+                      <span class="badge badge-pill primary-color">Najprodavaniji</span>
+                    </a>
+                  </strong>
+                </h5>
+
+                <h4 class="font-weight-bold blue-text">
+                  <strong>4390 rsd</strong>
+                </h4>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="card">
+
+              <div class="view overlay" data-toggle="modal" data-target="#centralModalSuccess4">
+                <img src="img/casio.jpg" class="card-img-top" alt="">
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <div class="card-body text-center">
+
+                <a href="" class="grey-text">
+                  <h5>Sat</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Casio</a>
+                  </strong>
+                </h5>
+
+                <h4 class="font-weight-bold blue-text">
+                  <strong>6990 rsd</strong>
+                </h4>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row wow fadeIn">
+
+          <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="card">
+
+              <div class="view overlay" data-toggle="modal" data-target="#centralModalSuccess5">
+                <img src="img/boss-the-scent-stick.jpg" class="card-img-top" alt="">
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <div class="card-body text-center">
+
+                <a href="" class="grey-text">
+                  <h5>Stik</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Hugo Boss The Scent Stick
+                      <span class="badge badge-pill danger-color">NOVO</span>
+                    </a>
+                  </strong>
+                </h5>
+
+                <h4 class="font-weight-bold blue-text">
+                  <strong>2200 rsd</strong>
+                </h4>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="card">
+
+              <div class="view overlay" data-toggle="modal" data-target="#centralModalSuccess6">
+                <img src="img/carolina-herrera-212-vip-men.jpg" class="card-img-top" alt="">
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <div class="card-body text-center">
+
+                <a href="" class="grey-text">
+                  <h5>Parfem</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Carolina Herrera 212 VIP</a>
+                  </strong>
+                </h5>
+
+                <h4 class="font-weight-bold blue-text">
+                  <strong>7100 rsd</strong>
+                </h4>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="card">
+
+              <div class="view overlay" data-toggle="modal" data-target="#centralModalSuccess7">
+                <img src="img/casio-g-shock.jpg" class="card-img-top" alt="">
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <div class="card-body text-center">
+
+                <a href="" class="grey-text">
+                  <h5>Sat</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">G-Shock MR-G
+                      <span class="badge badge-pill primary-color">Najprodavaniji</span>
+                    </a>
+                  </strong>
+                </h5>
+
+                <h4 class="font-weight-bold blue-text">
+                  <strong>11290 rsd</strong>
+                </h4>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="card">
+
+              <div class="view overlay" data-toggle="modal" data-target="#centralModalSuccess8">
+                <img src="img/paco-rabanne-black-xs-.jpg" class="card-img-top" alt="">
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <div class="card-body text-center">
+
+                <a href="" class="grey-text">
+                  <h5>Parfem</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Paco Rabbane Black XS</a>
+                    <span class="badge badge-pill danger-color">NOVO</span>
+                  </strong>
+                </h5>
+
+                <h4 class="font-weight-bold blue-text">
+                  <strong>6600 rsd</strong>
+                </h4>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+    </div>
+    
+<footer class="page-footer font-small unique-color-dark ">
+
+        <div style="background-color: #333440;">
+          <div class="container">
+    
+            
+            <div class="row py-4 d-flex align-items-center">
+    
+              
+              <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                <h6 class="mb-0">Povežite se sa nama na ostalim mrežama!</h6>
+              </div>
+              
+              <div class="col-md-6 col-lg-7 text-center text-md-right">
+                
+                
+                <a class="fb-ic" href="https://www.facebook.com" target="_blank">
+                  <i class="fab fa-facebook-f white-text mr-4" > </i>
+                </a>
+                
+                <a class="tw-ic" href="https://www.twitter.com" target="_blank">
+                  <i class="fab fa-twitter white-text mr-4"> </i>
+                </a>
+                
+                <a class="li-ic" href="https://www.linkedin.com" target="_blank">
+                  <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                </a>
+                
+                <a class="ins-ic" href="https://www.instagram.com" target="_blank">
+                  <i class="fab fa-instagram white-text"> </i>
+                </a>
+    
+              </div>
+   
+            </div>
+
+          </div>
+        </div>
+
+        <div class="container text-center text-md-left mt-5">
+
+          <div class="row mt-3">
+
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+              <h6 class="text-uppercase font-weight-bold">Pupa parfimerija</h6>
+              <hr class="stylish-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>...</p>
+    
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+              <h6 class="text-uppercase font-weight-bold">Proizvodi</h6>
+              <hr class="stylish-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <a href="#!">Parfemi</a>
+              </p>
+              <p>
+                <a href="#!">Satovi</a>
+              </p>
+              
+    
+            </div>
+
+            
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+              <h6 class="text-uppercase font-weight-bold">Kontakt</h6>
+              <hr class="stylish-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <i class="fas fa-home mr-3"></i>Kikinda, Trg Srpskih Dobrovoljaca 4</p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i>pupaparfimerija@gmail.com</p>
+              <p>
+                <i class="fas fa-phone mr-3"></i>+381 64 0000000</p>
+              <p>
+                <i class="fas fa-print mr-3"></i>0230 000 000</p>
+    
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="footer-copyright text-center py-3">© 2019 Copyright: Pupa Parfimerija
+        </div>
+
+      </footer>
+
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" 
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <h4 class="modal-title w-100 font-weight-bold">Ulogujte se</h4>
+                      <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                      <div class="md-form mb-5">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input type="email" ng-model="vm.imejl" id="defaultForm-email" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">Email</label>
+                      </div>
+              
+                      <div class="md-form mb-4">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <input type="password" ng-model="vm.sifra" id="defaultForm-pass" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Šifra</label>
+                      </div>
+              
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button class="btn btn-default" ng-click="vm.ulogujSe()">Ulogujte se</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Registracija</h4>
+        <button type="button" class="close"  aria-label="Close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="orangeForm-name" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-name">Ime</label>
+        </div>
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" ng-model="vm.imejl" id="orangeForm-email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-email">Email</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="password" ng-model="vm.sifra" id="orangeForm-pass" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="orangeForm-pass">Šifra</label>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-deep-orange" ng-click="vm.registrujSe()">Registracija</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="centralModalSuccess1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" >
+  <div class="modal-dialog modal-notify modal-success unique-color-dark" role="document">
+
+    <div class="modal-content">
+
+      <div class="modal-header unique-color-dark">
+        <p class="heading lead">Kupite</p>
+
+        <button type="button" class="close"  aria-label="Close"  data-dismiss="modal">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="text-center">
+          <img src="img/boss-bottled-night.jpg" class="card-img-top" alt="">
+          <div class="card-body text-center">
+
+              <a href="" class="grey-text">
+                <h5>Parfem</h5>
+              </a>
+              <h5>
+                <strong>
+                  <a href="" class="dark-grey-text">Hugo Boss Bottled Night
+                    <span class="badge badge-pill danger-color">NOVO</span>
+                  </a>
+                </strong>
+              </h5>
+
+              <h4 class="font-weight-bold blue-text">
+                <strong>5500 rsd</strong>
+              </h4>
+
+            </div>
+        </div>
+      </div>
+
+      <div class="modal-footer justify-content-center">
+        <div class="kolicina">
+          <a class="black-text">Količina:</a>
+          <input type="number" id="myNumber" value="1" style="width: 4em">
+        </div>
+        <a type="button" class="btn unique-color-dark waves-effect text-white" ng-click="vm.kupiBossBottledNight()">Kupite</a>
+        <div ng-show="!vm.ulogovan" class="nijeUlogovan text-danger">{{vm.poruka}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="centralModalSuccess2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" >
+  <div class="modal-dialog modal-notify modal-success unique-color-dark" role="document">
+
+    <div class="modal-content">
+
+      <div class="modal-header unique-color-dark">
+        <p class="heading lead">Kupite</p>
+
+        <button type="button" class="close"  aria-label="Close"  data-dismiss="modal">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+          <div class="text-center">
+            <img src="img/boss-bottled-unlimited.jpg" class="card-img-top" alt="">
+            <div class="card-body text-center">
+  
+                <a href="" class="grey-text">
+                  <h5>Parfem</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Hugo Boss Bottled Unlimited
+                    </a>
+                  </strong>
+                </h5>
+  
+                <h4 class="font-weight-bold blue-text">
+                  <strong>4990 rsd</strong>
+                </h4>
+  
+              </div>
+          </div>
+        </div>
+
+      <div class="modal-footer justify-content-center">
+        <div class="kolicina">
+          <a class="black-text">Količina:</a>
+          <input type="number" id="myNumber" value="1" style="width: 4em">
+        </div>
+        <a type="button" class="btn unique-color-dark waves-effect text-white" ng-click="vm.kupiBossBottledUnlimited()">Kupite</a>
+        <div ng-show="!vm.ulogovan" class="nijeUlogovan text-danger">{{vm.poruka}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="centralModalSuccess3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" >
+  <div class="modal-dialog modal-notify modal-success unique-color-dark" role="document">
+
+    <div class="modal-content">
+
+      <div class="modal-header unique-color-dark">
+        <p class="heading lead">Kupite</p>
+
+        <button type="button" class="close" aria-label="Close"  data-dismiss="modal">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+          <div class="text-center">
+            <img src="img/boss-the-scent.jpg" class="card-img-top" alt="">
+            <div class="card-body text-center">
+  
+                <a href="" class="grey-text">
+                  <h5>Parfem</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Hugo Boss The Scent
+                        <span class="badge badge-pill primary-color">Najprodavaniji</span>
+                    </a>
+                  </strong>
+                </h5>
+  
+                <h4 class="font-weight-bold blue-text">
+                  <strong>4390 rsd</strong>
+                </h4>
+  
+              </div>
+          </div>
+        </div>
+
+      <div class="modal-footer justify-content-center">
+        <div class="kolicina">
+          <a class="black-text">Količina:</a>
+          <input type="number" id="myNumber" value="1" style="width: 4em">
+        </div>
+        <a type="button" class="btn unique-color-dark waves-effect text-white" ng-click="vm.kupiBossTheScent()">Kupite</a>
+        <div ng-show="!vm.ulogovan" class="nijeUlogovan text-danger">{{vm.poruka}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="centralModalSuccess4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" >
+  <div class="modal-dialog modal-notify modal-success unique-color-dark" role="document">
+
+    <div class="modal-content">
+
+      <div class="modal-header unique-color-dark">
+        <p class="heading lead">Kupite</p>
+
+        <button type="button" class="close" aria-label="Close"  data-dismiss="modal">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+          <div class="text-center">
+            <img src="img/casio.jpg" class="card-img-top" alt="">
+            <div class="card-body text-center">
+  
+                <a href="" class="grey-text">
+                  <h5>Sat</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Casio
+                    </a>
+                  </strong>
+                </h5>
+  
+                <h4 class="font-weight-bold blue-text">
+                  <strong>6990 rsd</strong>
+                </h4>
+  
+              </div>
+          </div>
+        </div>
+
+      <div class="modal-footer justify-content-center">
+        <div class="kolicina">
+          <a class="black-text">Količina:</a>
+          <input type="number" id="myNumber" value="1" style="width: 4em">
+        </div>
+        <a type="button" class="btn unique-color-dark waves-effect text-white" ng-click="vm.kupiCasio()">Kupite</a>
+        <div ng-show="!vm.ulogovan" class="nijeUlogovan text-danger">{{vm.poruka}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="centralModalSuccess5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" >
+  <div class="modal-dialog modal-notify modal-success unique-color-dark" role="document">
+
+    <div class="modal-content">
+
+      <div class="modal-header unique-color-dark">
+        <p class="heading lead">Kupite</p>
+
+        <button type="button" class="close" aria-label="Close"  data-dismiss="modal">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+          <div class="text-center">
+            <img src="img/boss-the-scent-stick.jpg" class="card-img-top" alt="">
+            <div class="card-body text-center">
+  
+                <a href="" class="grey-text">
+                  <h5>Stick</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Hugo Boss The Scent Stick
+                      <span class="badge badge-pill danger-color">NOVO</span>
+                    </a>
+                  </strong>
+                </h5>
+  
+                <h4 class="font-weight-bold blue-text">
+                  <strong>2200 rsd</strong>
+                </h4>
+  
+              </div>
+          </div>
+        </div>
+
+      <div class="modal-footer justify-content-center">
+        <div class="kolicina">
+          <a class="black-text">Količina:</a>
+          <input type="number" id="myNumber" value="1" style="width: 4em">
+        </div>
+        <a type="button" class="btn unique-color-dark waves-effect text-white" ng-click="vm.kupiBossTheScentStick()">Kupite</a>
+        <div ng-show="!vm.ulogovan" class="nijeUlogovan text-danger">{{vm.poruka}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="centralModalSuccess6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" >
+  <div class="modal-dialog modal-notify modal-success unique-color-dark" role="document">
+
+    <div class="modal-content">
+
+      <div class="modal-header unique-color-dark">
+        <p class="heading lead">Kupite</p>
+
+        <button type="button" class="close" aria-label="Close"  data-dismiss="modal">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+          <div class="text-center">
+            <img src="img/carolina-herrera-212-vip-men.jpg" class="card-img-top" alt="">
+            <div class="card-body text-center">
+  
+                <a href="" class="grey-text">
+                  <h5>Parfem</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Carolina Herrera 212 VIP Men
+                    </a>
+                  </strong>
+                </h5>
+  
+                <h4 class="font-weight-bold blue-text">
+                  <strong>7100 rsd</strong>
+                </h4>
+  
+              </div>
+          </div>
+        </div>
+
+      <div class="modal-footer justify-content-center">
+        <div class="kolicina">
+          <a class="black-text">Količina:</a>
+          <input type="number" id="myNumber" value="1" style="width: 4em">
+        </div>
+        <a type="button" class="btn unique-color-dark waves-effect text-white" ng-click="vm.kupiCarolinaHerrera212VIP()">Kupite</a>
+        <div ng-show="!vm.ulogovan" class="nijeUlogovan text-danger">{{vm.poruka}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="centralModalSuccess7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" >
+  <div class="modal-dialog modal-notify modal-success unique-color-dark" role="document">
+
+    <div class="modal-content">
+
+      <div class="modal-header unique-color-dark">
+        <p class="heading lead">Kupite</p>
+
+        <button type="button" class="close" aria-label="Close"  data-dismiss="modal">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+          <div class="text-center">
+            <img src="img/casio-g-shock.jpg" class="card-img-top" alt="">
+            <div class="card-body text-center">
+  
+                <a href="" class="grey-text">
+                  <h5>Sat</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">G-Shock MR-G
+                        <span class="badge badge-pill primary-color">Najprodavaniji</span>
+                    </a>
+                  </strong>
+                </h5>
+  
+                <h4 class="font-weight-bold blue-text">
+                  <strong>11290 rsd</strong>
+                </h4>
+  
+              </div>
+          </div>
+        </div>
+
+      <div class="modal-footer justify-content-center">
+        <div class="kolicina">
+          <a class="black-text">Količina:</a>
+          <input type="number" id="myNumber" value="1" style="width: 4em">
+        </div>
+        <a type="button" class="btn unique-color-dark waves-effect text-white" ng-click="vm.kupiGShock()">Kupite</a>
+        <div ng-show="!vm.ulogovan" class="nijeUlogovan text-danger">{{vm.poruka}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="centralModalSuccess8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" >
+  <div class="modal-dialog modal-notify modal-success unique-color-dark" role="document">
+
+    <div class="modal-content">
+
+      <div class="modal-header unique-color-dark">
+        <p class="heading lead">Kupite</p>
+        <button type="button" class="close" aria-label="Close" data-dismiss="modal">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+          <div class="text-center">
+            <img src="img/paco-rabanne-black-xs-.jpg" class="card-img-top" alt="">
+            <div class="card-body text-center">
+  
+                <a href="" class="grey-text">
+                  <h5>Parfem</h5>
+                </a>
+                <h5>
+                  <strong>
+                    <a href="" class="dark-grey-text">Paco Rabanne Black XS
+                      <span class="badge badge-pill danger-color">NOVO</span>
+                    </a>
+                  </strong>
+                </h5>
+  
+                <h4 class="font-weight-bold blue-text">
+                  <strong>6600 rsd</strong>
+                </h4>
+  
+              </div>
+          </div>
+        </div>
+
+      <div class="modal-footer justify-content-center">
+        <div class="kolicina">
+          <a class="black-text">Količina:</a>
+          <input type="number" id="myNumber" value="1" style="width: 4em">
+        </div>
+        <a type="button" class="btn unique-color-dark waves-effect text-white" ng-click="vm.kupiPacoRabbaneBlackXS()">Kupite</a>
+        <div ng-show="!vm.ulogovan" class="nijeUlogovan text-danger">{{vm.poruka}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header unique-color-dark white-text">
+        <h5 class="modal-title" id="exampleModalLabel">Korpa</h5>
+        <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1 ng-repeat="el in vm.listaKorpe">{{el}}</h1>
+      </div>
+      <h2 class= "total text-primary d-flex justify-content-center">Total: {{vm.cenaKorpe}} rsd</h2>
+      <div class="modal-footer d-flex justify-content-center ">
+          
+        <button type="button" class="btn unique-color-dark white-text" data-dismiss="modal">Zatvorite</button>
+          
+      </div>
+    </div>
+  </div>
+</div>
+        
+<script type="text/javascript" src="app/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="app/popper.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="app/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app/mdb.min.js"></script>
+    
+    <script src="app/app.js"></script>
+
+</body>
+</html>      

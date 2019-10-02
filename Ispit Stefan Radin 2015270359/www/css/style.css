@@ -1,0 +1,26 @@
+body{
+    font-family: Quicksand;
+}
+
+.page-footer font-small unique-color-dark fixed-bottom {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
+.mb-1 navbar navbar-expand-lg navbar-dark default-color {
+    
+}
+
+.card {
+    height: 430px;
+}
+
+.kolicina {
+    position: relative;
+    left: -40px;
+}
+
+.card3{
+    height: 300px;
+}
