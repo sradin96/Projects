@@ -9,9 +9,9 @@ var randomQuestionD = 0;
 var randomQuestionE = 0;
 var randomQuestionF = 0;
 var sign;
-var result1 = null;
-var result2 = null; 
-var result3 = null;  
+var result1;
+var result2; 
+var result3;  
 var score = 0;
 var gameScore; 
 var scoreGameOver;
@@ -25,6 +25,7 @@ var newGameButton;
 var newGameButtonGameOver;
 var collision;
 var animation;
+var storedUserName;
 
 var snake = {
 x: 160,
@@ -75,7 +76,7 @@ var display = function(displayOption){
 				break;
 
 		case 3:
-				displaySnake.style.display = "none";
+				displaySnake.style.display = "block";
 				displayMenu.style.display = "none";
 				displayGameOver.style.display = "none";
 				displayQuestion.style.display = "block";
@@ -84,7 +85,7 @@ var display = function(displayOption){
 				break;
 
 		case 4:
-				displaySnake.style.display = "none";
+				displaySnake.style.display = "block";
 				displayMenu.style.display = "none";
 				displayGameOver.style.display = "none";
 				displayQuestion.style.display = "none";
@@ -93,7 +94,7 @@ var display = function(displayOption){
 				break;
 
 		case 5:
-				displaySnake.style.display = "none";
+				displaySnake.style.display = "block";
 				displayMenu.style.display = "none";
 				displayGameOver.style.display = "none";
 				displayQuestion.style.display = "none";
@@ -135,7 +136,6 @@ else if (snake.y >= canvas.height) {
 snake.cells.unshift({x: snake.x, y: snake.y});
 
 if (snake.cells.length > snake.maxCells) {
-
  	snake.cells.pop();
 }
 
@@ -147,19 +147,48 @@ context.fillStyle = 'green';
 snake.cells.forEach(function(cell, index) {
 
 context.fillRect(cell.x, cell.y, grid-1, grid-1);  
-   
-if (cell.x === apple.x && cell.y === apple.y) {			
+
+if (cell.x === apple.x && cell.y === apple.y) {	
+	pause();
 	display(3);
 }
    for (var i = index + 1; i < snake.cells.length; i++) {
-
      if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
 		collision = true;
 		display(1);
+		highScore();
 	 }
    }
  }); 
 }
+
+function pause(){
+	window.cancelAnimationFrame(animation);
+}
+
+function unpause(){
+	window.requestAnimationFrame(loop);
+}
+var enterKey;
+window.addEventListener('keydown', function (e) {
+	var key = e.keyCode;
+	if(key === 80){
+		pause();
+	}else if(key === 79){
+		unpause();
+	}
+	if(key === 13){	
+		 if(displayCorrectQuestion.style.display == "block"){
+			document.getElementById("correctQBtn").click();
+		}else if(displayWrongQuestion.style.display == "block"){
+			document.getElementById("wrongQBtn").click();
+		}else if(displayMenu.style.display = "block"){
+			document.getElementById("newGameBtn").click();
+		}else if(displayGameOver.style.display == "block"){
+			document.getElementById("newGameBtnGameOver").click();
+		}
+	}
+});
 
 document.addEventListener('keydown', function(e) {
 	if (e.which === 37 && snake.dx === 0) {
@@ -189,21 +218,33 @@ function changeScoreGameOver(scoreValue){
 	scoreGameOver.innerHTML = String(scoreValue);
 }
 
-var newGame = function(){		
+var newGame = function(){	
 	if (animation) {
-		window.cancelAnimationFrame(animation)
-		
+		pause();
 	}
-	if(score < 10){
+	if(snake.maxCells < 10){
 		randomLevelOne();
-	}else if(score > 10 && score < 20){
+		document.getElementById("levelOne").style.color = "#4CAF50";
+		document.getElementById("levelTwo").style.color = "white";
+		document.getElementById("levelThree").style.color = "#white";
+	}else if(snake.maxCells >= 10 && snake.maxCells < 20){
 		randomLevelTwo();
-	}else if(score > 20){
+		document.getElementById("levelOne").style.color = "white";
+		document.getElementById("levelTwo").style.color = "#4CAF50";
+		document.getElementById("levelThree").style.color = "#white";
+	}else if(snake.maxCells >= 20){
 		randomLevelThree();
+		document.getElementById("levelOne").style.color = "white";
+		document.getElementById("levelTwo").style.color = "white";
+		document.getElementById("levelThree").style.color = "#4CAF50";
+	}
+	if(document.getElementById("myBtnUser").innerHTML !== storedUserName){		
+		myFunction();
+	}else{
+		display(0);
 	}
 	score = 0;
-	operationSign();
-	display(0);	
+	operationSign();	
 	changeScore(0);
 	changeScoreGameOver(0);
 	snake.x = 160;
@@ -218,15 +259,23 @@ var newGame = function(){
 }
 
 var continueGame = function(){
-	display(0);
-	if(score < 10){
+	display(0);	
+	unpause();
+	if(snake.maxCells < 10){
 		randomLevelOne();
-	}else if(score >= 10 && score < 20){
+		document.getElementById("levelOne").style.color = "#4CAF50";
+	}else if(snake.maxCells >= 10 && snake.maxCells < 20){
 		randomLevelTwo();
-	}else if(score >= 20){
+		document.getElementById("levelOne").style.color = "white";
+		document.getElementById("levelTwo").style.color = "#4CAF50";
+	}else if(snake.maxCells >= 20){
 		randomLevelThree();
+		document.getElementById("levelOne").style.color = "white";
+		document.getElementById("levelTwo").style.color = "white";
+		document.getElementById("levelThree").style.color = "#4CAF50";
 	}
 	operationSign();
+	var a = document.getElementById("inputAnswer").autofocus;
 	inputAnswer.value = null;	
 }
 
@@ -240,20 +289,17 @@ var wrongQuestion = function(){
 	display(5);	
 	apple.x = getRandomInt(0, 25) * grid;
 	apple.y = getRandomInt(0, 25) * grid;
-	if(score < 10){
+	if(snake.maxCells < 10){
 		document.getElementById("questionsAS").innerHTML = result1;
-	}else if(score >= 10 && score < 20){
+	}else if(snake.maxCells >= 10 && snake.maxCells < 20){
 		document.getElementById("questionsAS").innerHTML = result2;
-	}else if(score >= 20){
+	}else if(snake.maxCells >= 20){
 		document.getElementById("questionsAS").innerHTML = result3;	
-	}
-		
+	}	
 }
 
 function operationSign(){
 	var operation = ['+', '-', '*', '/'];
-	//var operation = ['/'];
-	//var operation = ['*'];
 	var randomOperation = operation[Math.floor(Math.random() * operation.length)];
 	sign = randomOperation;
 	document.getElementById("operation").innerHTML = randomOperation;
@@ -294,10 +340,18 @@ function randomLevelOne(){
 }
 
 function newGameLevelOne(){
-	newGame();
-	randomLevelOne();
-	changeScore(score);
-	changeScoreGameOver(score);
+	document.getElementById("levelOne").style.color = "#4CAF50";
+	document.getElementById("levelTwo").style.color = "white";
+	document.getElementById("levelThree").style.color = "white";
+	if(document.getElementById("myBtnUser").innerHTML !== storedUserName){		
+		myFunction();
+		display(2);
+	}else{
+		newGame();
+		randomLevelOne();
+		changeScore(score);
+		changeScoreGameOver(score);
+	}	
 }
 
 function randomLevelTwo(){
@@ -305,15 +359,15 @@ function randomLevelTwo(){
 	var randomD = Math.floor(Math.random() * 20) + 1;
 	var resDivide2;
 	var divide2 = randomC % randomD === 0;
-	var belongs;
-	var undivide = ['1', '2', '3', '5', '7', '11', '13', '17', '19'];
-	belongs = undivide.includes(randomC);
+	var belongs2;
+	var undivide2 = ['1', '2', '3', '5', '7', '11', '13', '17', '19'];
+	belongs2 = undivide2.includes(randomC);
 
-	while(belongs==true){
+	while(belongs2==true){
 		randomC = Math.floor(Math.random() * 20) + 1;
-		belongs = undivide.includes(randomC);
+		belongs2 = undivide2.includes(randomC);
 
-		if(belongs==false){
+		if(belongs2==false){
 			break;
 		}
 	}
@@ -336,12 +390,20 @@ function randomLevelTwo(){
 }
 
 function newGameLevelTwo(){
-	newGame();
-	randomLevelTwo();
-	score += 10;
-	snake.maxCells += 10;
-	changeScore(score); 
-	changeScoreGameOver(score);	
+	document.getElementById("levelOne").style.color = "white";
+	document.getElementById("levelTwo").style.color = "#4CAF50";
+	document.getElementById("levelThree").style.color = "white";
+	if(document.getElementById("myBtnUser").innerHTML !== storedUserName){		
+		myFunction();
+		display(2);
+	}else{
+		newGame();	
+		snake.maxCells += 10;
+		randomLevelTwo();	
+		changeScore(score); 
+		changeScoreGameOver(score);
+	}
+		
 }
 
 function randomLevelThree(){
@@ -349,15 +411,14 @@ function randomLevelThree(){
 	var randomF = Math.floor(Math.random() * 100) + 1;
 	var resDivide3;
 	var divide3 = randomE % randomF === 0;
-	var belongs;
-	var undivide = ['1', '2', '3', '5', '7', '11', '13', '17', '19', '23', '29', '31', '37', '41', '43', '47', '49', '53', '59', '61', '67', '71', '73', '77', '79', '83', '89', '97'];
-	belongs = undivide.includes(randomE);
-
-	while(belongs==true){
+	var belongs3;
+	var undivide3 = ['1', '2', '3', '5', '7', '11', '13', '17', '19', '23', '29', '31', '37', '41', '43', '47', '49', '53', '59', '61', '67', '71', '73', '77', '79', '83', '89', '97'];
+	belongs3 = undivide3.includes(randomE);
+	while(belongs3==true){
 		randomE = Math.floor(Math.random() * 100) + 1;
-		belongs = undivide.includes(randomE);
+		belongs3 = undivide3.includes(randomE);
 
-		if(belongs==false){
+		if(belongs3==false){
 			break;
 		}
 	}
@@ -381,12 +442,19 @@ function randomLevelThree(){
 }
 
 function newGameLevelThree(){
-	newGame();
-	randomLevelThree();	
-	score += 20;
-	snake.maxCells += 20;
-	changeScore(score);
-	changeScoreGameOver(score);
+	document.getElementById("levelOne").style.color = "white";
+	document.getElementById("levelTwo").style.color = "white";
+	document.getElementById("levelThree").style.color = "#4CAF50";
+	if(document.getElementById("myBtnUser").innerHTML !== storedUserName){		
+		myFunction();
+		display(2);
+	}else{
+		newGame();
+		randomLevelThree();			
+		snake.maxCells += 20;
+		changeScore(score);
+		changeScoreGameOver(score);
+	}	
 }
 
 function submitAnswers(){
@@ -404,8 +472,7 @@ function submitAnswers(){
 			result1 = outcome1;							
 		}else if(sign == '/'){
 				outcome1 = randomQuestionA / randomQuestionB;
-				result1 = outcome1;	
-							
+				result1 = outcome1;						
 		}if(i == result1){
 			correctQuestion();
 			snake.maxCells++;
@@ -463,61 +530,71 @@ function submitAnswers(){
 		}else{
 			wrongQuestion();
 		}
-	}	
-}
-
-var modal = document.getElementById('id01');
-var modal2 = document.getElementById('id02');
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
 	}
-	if (event.target == modal2) {
-        modal2.style.display = "none";
-    }
 }
 
-var vm = this;
+var nm = document.getElementById("nm");
+var pw = document.getElementById("pw");
+var unm = document.getElementById("unm");
+document.getElementById("myBtn3").style.display = "none";
+document.getElementById("myBtnEdit").style.display = "none";
 
-	vm.badForm=false;
-	vm.adminEmail="stefanr@gmail.com"
-	vm.adminPassword="123";
-    vm.email1="";
-    vm.password1="";
-    vm.email="";
-    vm.password="";
-    vm.loggedin=false;
-    vm.message="";
+function storeUser(){
+	localStorage.setItem("nm", nm.value);
+	localStorage.setItem("pw", pw.value);
+	localStorage.setItem("unm", unm.value);
+	modal.style.display = "none";
+	nm.value = null;
+	unm.value = null;
+	pw.value = null;
+}
 
-vm.adminLogin= function(){
-	if(vm.password==vm.adminPassword && vm.email==vm.adminEmail){
-		vm.message="Correct";
-		vm.loggedin=true;
-		$('#modalLoginForm').modal('hide');
+function checkUser(){
+    var storedName = localStorage.getItem("nm");
+    var storedPw = localStorage.getItem("pw");
+	var storedUnm = localStorage.getItem("unm");
+	storedUserName = storedUnm;
+    if(document.getElementById("userName").value === storedName && document.getElementById("userPw").value === storedPw){		
+		document.getElementById("myBtnUser").innerHTML = storedUnm;
+		document.getElementById("myBtn3").style.display = "block";
+		document.getElementById("myBtn2").style.display = "none";
+		document.getElementById("myBtn").style.display = "none";
+		document.getElementById("myBtnUser").style.display = "block";		
+		modal2.style.display = "none";
+		display(2);
+		userName.value = null;
+		userPw.value = null;
+    }	
+}
+
+function logoutUser(){
+	document.getElementById("myBtn2").style.display = "block";
+	document.getElementById("myBtn").style.display = "block";
+	document.getElementById("myBtn3").style.display = "none";
+	document.getElementById("myBtnEdit").style.display = "none";
+	document.getElementById("myBtnUser").style.display = "none";
+	localStorage.setItem("nm", null);
+	localStorage.setItem("pw", null);
+	localStorage.setItem("unm", null);
+	display(2);
+	checkUser();
+}
+
+function highScore(){
+	if(storedUserName !== localStorage.getItem("unm")){
+		document.getElementById("scoreUser1").innerHTML = score;
+	}else if(document.getElementById("user1").innerHTML !== storedUserName && document.getElementById("user2").innerHTML !== document.getElementById("user1").innerHTML){
+		document.getElementById("user2").innerHTML = localStorage.getItem("unm");
+		document.getElementById("scoreUser2").innerHTML = score;
 	}else{
-		vm.message="Incorrect";
-		vm.loggedin = false;
+		document.getElementById("user1").innerHTML = localStorage.getItem("unm");
+		document.getElementById("scoreUser1").innerHTML = score;
 	}
 }
 
-vm.login= function(){
-	if(vm.password==vm.password1 && vm.email==vm.email1){
-		vm.message="Correct";
-		vm.loggedin=true;
-		$('#modalLoginForm').modal('hide');
-	}else{
-		vm.message="Incorrect";
-		vm.loggedin = false;
-	}
-}
-vm.logout=function(){
-  vm.loggedin=false;
-}
-vm.register=function(){
-	vm.email1=vm.email;
-	vm.password1=vm.password;
-	$('#modalRegisterForm').modal('hide');
+function myFunction() {
+	var popup = document.getElementById("myPopup");
+	popup.classList.toggle("show");
 }
 
 displaySnake = document.getElementById("canvas");
@@ -540,18 +617,47 @@ newGameButtonGameOver.onclick = function(){
 questionButton = document.getElementById("questionBtn");
 questionButton.onclick = function(){
 	submitAnswers();
-}
+};
 
 correctQuestionButton = document.getElementById("correctQBtn");
 correctQuestionButton.onclick = function(){
 	continueGame();
-}
+};
 
 wrongQuestionButton = document.getElementById("wrongQBtn");
 wrongQuestionButton.onclick = function(){
 	continueGame();
-}
+};
 
 gameScore = document.getElementById("score1");
 scoreGameOver = document.getElementById("score2");
 display(2);
+
+var modal = document.getElementById("myModal");
+var modal2 = document.getElementById("myModal2");
+var btn = document.getElementById("myBtn");
+var btn2 = document.getElementById("myBtn2");
+var span = document.getElementsByClassName("close");
+
+btn.onclick = function() {
+  modal.style.display = "block";
+  document.getElementById("myPopup").style.display = "none";
+}
+
+btn2.onclick = function() {
+	modal2.style.display = "block";
+	document.getElementById("myPopup").style.display = "none";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+  modal2.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal || event.target == modal2) {
+	modal.style.display = "none";
+	modal2.style.display = "none";
+  }
+}
+
