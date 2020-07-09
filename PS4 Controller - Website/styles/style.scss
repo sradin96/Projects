@@ -1,0 +1,116 @@
+@import "home";
+@import "features";
+@import "soon";
+@import "footer";
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+li {
+  font-size: 2rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+  nav {
+    #logo {
+      flex: 1;
+    }
+    ul {
+      li {
+        margin-left: 5rem;
+      }
+    }
+  }
+  .showcase {
+    grid-template-columns: 10% 1fr 10%;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+    img,
+    .info {
+      grid-column: 2/3;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 15rem;
+      text-align: center;
+      font-size: 5rem;
+    }
+  }
+  .features {
+    align-items: center;
+    h2 {
+      margin-top: 5rem;
+    }
+    .cards {
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+    }
+    .card {
+      margin: 5rem 0rem;
+    }
+  }
+  .soon {
+    overflow: hidden;
+    img {
+      width: 70%;
+    }
+    h2 {
+      font-size: 5rem;
+      text-align: center;
+    }
+  }
+  footer {
+    h1 {
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .showcase img {
+    height: 400px;
+  }
+  .soon img {
+    height: 350px;
+  }
+}

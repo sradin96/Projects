@@ -1,0 +1,50 @@
+.features-container{
+    background: #080808;
+
+}
+
+.features{
+    min-height: 90vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h2{
+        margin: 4rem 0rem;
+    }
+    .cards{
+        display: flex;
+        justify-content: space-between;
+        color: black;
+
+        .card{
+            background: white;
+            margin: 3rem 3rem;
+            display:flex;
+            flex-direction: column;
+            text-align: center;
+            border-radius: 2rem;
+            height: 40rem;
+            width: 50rem;
+            h4{
+                margin: 3rem 4rem;
+            }
+            p{  
+                margin: 2rem;
+                font-size: 12px;
+            }
+            img{
+                align-self: center;
+                justify-self: center;
+                object-fit: cover;
+                height: 20rem;
+                width: 30rem;
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,572 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+}
+
+canvas{
+    position: relative;
+    top: 80px;
+    margin:auto;
+    border-style: solid;
+    border-width: 10px;
+    border-color: yellowgreen;
+}
+
+h1{
+    position: relative;
+    top: 30px;
+    margin: auto;
+    width: 100px;
+    font-size: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFFFFF;
+}
+
+h2{
+    position: relative;
+    top: 0px;
+    margin: auto;
+    font-size: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFFFFF;
+}
+
+.btn{
+    position: relative;
+    margin: auto;
+}
+
+.score{
+    position: absolute;
+    top: 90px;
+    right: 57%;    
+    width: 240px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.score1{
+    position: absolute;
+    top: 30%;
+    left: 44%;
+}
+
+h3{
+    position: absolute;
+    top: 20%;
+    right: 70%;
+    width: 100px;
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFFFFF;
+}
+
+a{
+    color: white;
+}
+
+a:hover, a:focus, a:active{
+    color: #4CAF50;
+}
+
+.level{
+    position: absolute;
+    top: 170px;
+    left: 150px;
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+}
+
+#levelOne{
+    position: absolute;
+    top: 220px;
+    left: 150px;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+#levelTwo{
+    position: absolute;
+    top: 270px;
+    left: 150px;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+#levelThree{
+    position: absolute;
+    top: 320px;
+    left: 150px;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+#pause{
+    position: absolute;
+    top: 370px;
+    left: 150px;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+#unpause{
+    position: absolute;
+    top: 420px;
+    left: 150px;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+#menu{
+    display: inline-block;
+    width: 400px;
+    padding-top: 95px;
+    padding-bottom: 95px;
+    font-size: 40px;
+    text-align: center;
+    color: #FFF;
+}
+
+#gameover{
+    display: none;
+    padding-top: 95px;
+    padding-bottom: 95px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 30px;
+    color: #FFF;
+    
+}
+#gameover p{
+    position: absolute;
+    top: 38%;
+    right: 43%;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#menu p{
+    position: absolute;
+    top: 30%;
+    right: 44.5%;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.buttonLevelOne{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 46.5%;
+    top: 50%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttonLevelTwo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 46.5%;
+    top: 50%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttonLevelThree{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 46.5%;
+    top: 50%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 46.5%;
+    top: 50%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.correctQbutton{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 890px;
+    top: 650px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wrongQbutton{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 890px;
+    top: 650px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 46.5%;
+    top: 50%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.qbutton{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 680px;
+    right: 900px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.q{
+    color: #FFF;
+    position: absolute;
+    top: 550px;
+    right: 870px;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.c{
+    color: #FFF;
+    position: absolute;
+    top: 550px;
+    right: 920px;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.i{
+    color: #FFF;
+    position: absolute;
+    top: 600px;
+    right: 850px;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wq{
+    color: #FFF;
+    position: absolute;
+    top: 550px;
+    right: 800px;
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#inputAnswer{
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#myBtn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#myBtn2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 125px;
+    top: 0;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#myBtn3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#myBtnUser{
+    position: absolute;
+    top: 10px;
+    right: 150px;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+#myBtnEdit{
+    position: absolute;
+    top: 10px;
+    right: 270px;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+#rgstr_btn, #login_btn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#leaderboard{
+    position: absolute;
+    top: 170px;
+    right: 300px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+table{
+    position: absolute;
+    top: 220px;
+    right: 60px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    width: 30%;
+}
+
+#hintAnswer{
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+#user1, #user2{
+    position: relative;
+    left: 100px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 98%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background:#f1f1f1;
+}
+
+#rgstr_btn, #login_btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+  
+#rgstr_btn:hover, #login_btn:hover {
+    opacity:1;
+}
+
+.container {
+    padding: 16px;
+}
+
+.modal, .modal2 {
+    display: none;  
+    position: fixed;  
+    z-index: 1;  
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 110%;
+    overflow: auto;  
+    background-color: rgb(0,0,0);   
+    background-color: rgba(0,0,0,0.4);  
+  }
+  
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;  
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+h2{
+    color: black;
+    position: relative;
+    text-align: center;
+
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #4CAF50;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 370px;
+  left: 1010px;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #4CAF50 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 3s;
+  animation: fadeIn 2s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+#google_translate_element{
+    position: absolute;
+    top: 80px;
+    right: 0px;
+}
