@@ -10,7 +10,7 @@ Snake Game - Thesis has its own levels and every time you pick up an apple, it h
 
 ## Snake Game
 
-Snake Game is a classic Snake Game.
+Classical Snake Game.
 
 ## Music Box
 
@@ -18,4 +18,4 @@ Music Box is a website with 6 colorful buttons where a sound is played each time
 
 ## Perfume Store - Website
 
-Perfume Store - Website is a exam Project where i used Bootstrap and Angular to make a website. I designed the whole website with Bootstrap library and make all the functions with JavaScript. Login works thanks to Angular. User needs to login/register first if he wants to order an item.
+Perfume Store - Website is a exam Project where i used Bootstrap and Angular to make a website. I designed the whole website with Bootstrap library and make all the functions with JavaScript. Login/Register works with Angular. User needs to login/register first if he wants to order an item.
