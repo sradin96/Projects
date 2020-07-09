@@ -1,6 +1,10 @@
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 var grid = 16;
+<<<<<<< HEAD
+=======
+var randomQuestion = 0;
+>>>>>>> 20d2d34bde0db056c7b5ad6e21baad01438cfa7d
 var randomQuestionA = 0;
 var randomQuestionB = 0;
 var randomQuestionC = 0;
@@ -111,7 +115,11 @@ if (++count < 3) {
 }
 
 count = 0;
+<<<<<<< HEAD
 context.clearRect(0, 0, canvas.width, canvas.height);
+=======
+context.clearRect(0, 0,canvas.width,canvas.height);
+>>>>>>> 20d2d34bde0db056c7b5ad6e21baad01438cfa7d
 
 snake.x += snake.dx;
 snake.y += snake.dy;
@@ -176,12 +184,25 @@ window.addEventListener('keydown', function (e) {
 	}else if(key === 79){
 		unpause();
 	}
+<<<<<<< HEAD
 	if(key === 13){
 		document.getElementById("questionBtn").click();
 		document.getElementById("newGameBtn").click();
 		document.getElementById("newGameBtnGameOver").click();
 		document.getElementById("correctQBtn").click();
 		document.getElementById("wrongQBtn").click();
+=======
+	if(key === 13){	
+		 if(displayCorrectQuestion.style.display == "block"){
+			document.getElementById("correctQBtn").click();
+		}else if(displayWrongQuestion.style.display == "block"){
+			document.getElementById("wrongQBtn").click();
+		}else if(displayMenu.style.display = "block"){
+			document.getElementById("newGameBtn").click();
+		}else if(displayGameOver.style.display == "block"){
+			document.getElementById("newGameBtnGameOver").click();
+		}
+>>>>>>> 20d2d34bde0db056c7b5ad6e21baad01438cfa7d
 	}
 });
 
@@ -220,10 +241,19 @@ var newGame = function(){
 	if(snake.maxCells < 10){
 		randomLevelOne();
 		document.getElementById("levelOne").style.color = "#4CAF50";
+<<<<<<< HEAD
+=======
+		document.getElementById("levelTwo").style.color = "white";
+		document.getElementById("levelThree").style.color = "#white";
+>>>>>>> 20d2d34bde0db056c7b5ad6e21baad01438cfa7d
 	}else if(snake.maxCells >= 10 && snake.maxCells < 20){
 		randomLevelTwo();
 		document.getElementById("levelOne").style.color = "white";
 		document.getElementById("levelTwo").style.color = "#4CAF50";
+<<<<<<< HEAD
+=======
+		document.getElementById("levelThree").style.color = "#white";
+>>>>>>> 20d2d34bde0db056c7b5ad6e21baad01438cfa7d
 	}else if(snake.maxCells >= 20){
 		randomLevelThree();
 		document.getElementById("levelOne").style.color = "white";
@@ -281,11 +311,19 @@ var wrongQuestion = function(){
 	display(5);	
 	apple.x = getRandomInt(0, 25) * grid;
 	apple.y = getRandomInt(0, 25) * grid;
+<<<<<<< HEAD
 	if(score < 10){
 		document.getElementById("questionsAS").innerHTML = result1;
 	}else if(score >= 10 && score < 20){
 		document.getElementById("questionsAS").innerHTML = result2;
 	}else if(score >= 20){
+=======
+	if(snake.maxCells < 10){
+		document.getElementById("questionsAS").innerHTML = result1;
+	}else if(snake.maxCells >= 10 && snake.maxCells < 20){
+		document.getElementById("questionsAS").innerHTML = result2;
+	}else if(snake.maxCells >= 20){
+>>>>>>> 20d2d34bde0db056c7b5ad6e21baad01438cfa7d
 		document.getElementById("questionsAS").innerHTML = result3;	
 	}	
 }
@@ -389,7 +427,11 @@ function newGameLevelTwo(){
 		myFunction();
 		display(2);
 	}else{
+<<<<<<< HEAD
 		newGame();
+=======
+		newGame();	
+>>>>>>> 20d2d34bde0db056c7b5ad6e21baad01438cfa7d
 		snake.maxCells += 10;
 		randomLevelTwo();	
 		changeScore(score); 
@@ -442,7 +484,11 @@ function newGameLevelThree(){
 		display(2);
 	}else{
 		newGame();
+<<<<<<< HEAD
 		randomLevelThree();	
+=======
+		randomLevelThree();			
+>>>>>>> 20d2d34bde0db056c7b5ad6e21baad01438cfa7d
 		snake.maxCells += 20;
 		changeScore(score);
 		changeScoreGameOver(score);
@@ -551,7 +597,11 @@ function checkUser(){
 		document.getElementById("myBtn3").style.display = "block";
 		document.getElementById("myBtn2").style.display = "none";
 		document.getElementById("myBtn").style.display = "none";
+<<<<<<< HEAD
 		document.getElementById("myBtnUser").style.display = "block";			
+=======
+		document.getElementById("myBtnUser").style.display = "block";		
+>>>>>>> 20d2d34bde0db056c7b5ad6e21baad01438cfa7d
 		modal2.style.display = "none";
 		display(2);
 		userName.value = null;
@@ -575,6 +625,7 @@ function logoutUser(){
 function highScore(){
 	if(storedUserName !== localStorage.getItem("unm")){
 		document.getElementById("scoreUser1").innerHTML = score;
+<<<<<<< HEAD
 	}else{
 		document.getElementById("user1").innerHTML = localStorage.getItem("unm");
 		document.getElementById("scoreUser1").innerHTML = score;
@@ -590,6 +641,14 @@ function highScore(){
 	}else{
 		document.getElementById("user3").innerHTML = localStorage.getItem("unm");
 		document.getElementById("scoreUser3").innerHTML = score;
+=======
+	}else if(document.getElementById("user1").innerHTML !== storedUserName && document.getElementById("user2").innerHTML !== document.getElementById("user1").innerHTML){
+		document.getElementById("user2").innerHTML = localStorage.getItem("unm");
+		document.getElementById("scoreUser2").innerHTML = score;
+	}else{
+		document.getElementById("user1").innerHTML = localStorage.getItem("unm");
+		document.getElementById("scoreUser1").innerHTML = score;
+>>>>>>> 20d2d34bde0db056c7b5ad6e21baad01438cfa7d
 	}
 }
 
