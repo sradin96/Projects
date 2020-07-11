@@ -499,11 +499,7 @@ input[type=text], input[type=password], input[type=email] {
     margin: 15% auto;  
     padding: 20px;
     border: 1px solid #888;
-<<<<<<< HEAD
     width: 40%;
-=======
-    width: 80%;  
->>>>>>> 20d2d34bde0db056c7b5ad6e21baad01438cfa7d
 }
 
 h2{
