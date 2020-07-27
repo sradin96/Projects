@@ -1,0 +1,638 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.img-cart:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1d1d;
+  font-size: 20px;
+}
+
+p {
+  color: #1f1d1d;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+  padding: 0px 25px 0px 25px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.col-2 {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  min-width: 300px;
+}
+
+.col-2 img {
+  max-width: 100%;
+  padding: 50px 0px;
+}
+
+.col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0px;
+}
+
+.col-2 p {
+  font-size: 22px;
+}
+
+.col-2 .btn {
+  display: inline-block;
+  background: #ff523b;
+  color: white;
+  padding: 8px 30px;
+  margin: 30px 0px;
+  border-radius: 30px;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+.home {
+  background: radial-gradient(#fff, #555);
+  height: 100vh;
+}
+
+.categories {
+  margin: 70px 0px;
+}
+
+.col-3 {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+
+.col-3 img {
+  width: 100%;
+}
+
+.small-container {
+  max-width: 1080px;
+  margin: auto;
+  padding: 0px 25px;
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: #1f1d1d;
+}
+
+.title::after {
+  content: "";
+  background: #ff523b;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.col-4 {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.col-4 img {
+  width: 100%;
+}
+
+h4 {
+  color: #555;
+  font-weight: normal;
+}
+
+.col-4 p {
+  font-size: 16px;
+}
+
+.raiting .fa {
+  color: #ff523b;
+}
+
+.col-4:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.offer {
+  background: radial-gradient(#fff, #555);
+  margin-top: 80px;
+  padding: 30px 0px;
+}
+
+.offer img {
+  padding: 50px;
+}
+
+.offer small {
+  color: #1f1d1d;
+}
+
+.brands {
+  margin: 100px auto;
+}
+
+.col-5 {
+  width: 160px;
+}
+
+.col-5 img {
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.col-5 img:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.footer {
+  background: #555;
+  color: #fff;
+  font-size: 14px;
+  padding: 30px 0px 30px;
+}
+
+.footer p {
+  color: #fff;
+}
+
+.footer h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer li {
+  margin: 5px 0px;
+}
+
+.footer li:hover {
+  cursor: pointer;
+  color: #ff523b;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-col-1 {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  text-align: center;
+}
+
+.footer-col-1 img {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.footer-col-1 img:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.footer-col-2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.footer-col-2 img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.footer-col-3,
+.footer-col-4 {
+  -ms-flex-preferred-size: 12%;
+      flex-basis: 12%;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.app-logo {
+  margin-top: 20px;
+}
+
+.app-logo img {
+  width: 140px;
+}
+
+.footer hr {
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.img-menu {
+  width: 20px;
+  margin-left: 20px;
+  display: none;
+}
+
+/*------------------ all products ---------------*/
+.row-2 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 100px auto 50px;
+}
+
+select {
+  border: 1px solid #ff523b;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+select:focus {
+  outline: none;
+}
+
+.page-btn {
+  margin: 0 auto 80px;
+}
+
+.page-btn span {
+  display: inline-block;
+  border: 1px solid #ff523b;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.page-btn span:hover {
+  background: #ff523b;
+  color: white;
+}
+
+.single-product {
+  margin-top: 80px;
+}
+
+.single-product .col-2 {
+  padding: 20px;
+}
+
+.single-product .col-2 img {
+  padding: 0;
+}
+
+.single-product h4 {
+  margin: 20px 0px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.single-product select {
+  display: block;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.single-product input {
+  width: 50px;
+  height: 40px;
+  padding-right: 10px;
+  font-size: 30px;
+  margin-right: 10px;
+  border: 1px solid #ff523b;
+}
+
+.single-product input:focus {
+  outline: none;
+}
+
+.single-product .fa {
+  color: #ff523b;
+  margin-left: 10px;
+}
+
+.small-img-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.small-img-col {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+  cursor: pointer;
+}
+
+.cart-page {
+  margin: 80px auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+  color: #fff;
+  background: #ff523b;
+  font-weight: normal;
+}
+
+td {
+  padding: 10px 5px;
+}
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td a {
+  color: #ff523b;
+  font-size: 12px;
+}
+
+td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+th:last-child {
+  text-align: right;
+}
+
+.total-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.total-price table {
+  border-top: 3px solid #ff523b;
+  width: 100%;
+  max-width: 400px;
+}
+
+.account-page {
+  padding: 50px 0px;
+  background: radial-gradient(#ff523b, #555);
+}
+
+.form-container {
+  background: #fff;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  padding: 20px 0px;
+  margin: auto;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.form-container span {
+  font-weight: bold;
+  padding: 0px 10px;
+  color: #555;
+  cursor: pointer;
+  width: 100px;
+  display: inline-block;
+}
+
+.form-container .form-btn {
+  display: inline-block;
+}
+
+.form-container form {
+  max-width: 300px;
+  padding: 0 20px;
+  position: absolute;
+  top: 130px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.form-container form input {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0px;
+  padding: 0px 10px;
+  border: 1px solid #ccc;
+}
+
+.form-container .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+
+.form-container .btn:focus {
+  outline: none;
+}
+
+.form-container a {
+  font-size: 10px;
+}
+
+#login-form {
+  left: -300px;
+}
+
+#register-form {
+  left: 0;
+}
+
+#indicator {
+  width: 100px;
+  border: none;
+  background: #ff523b;
+  height: 3px;
+  margin-top: 3px;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+@media only screen and (max-width: 725px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    background: #555;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0.9;
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 50px 10px 0px;
+  }
+  nav ul li a {
+    color: #fff;
+  }
+  nav ul li a:hover {
+    color: #ff523b;
+  }
+  .img-menu {
+    display: block;
+    cursor: pointer;
+  }
+  .img-home {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .row {
+    text-align: center;
+  }
+  .col-2,
+  .col-3,
+  .col-4 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .img-home {
+    display: none;
+  }
+  .single-product .row {
+    text-align: left;
+  }
+  .single-product .col-2 {
+    padding: 20px 0px;
+  }
+  .single-product h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .cart-info p {
+    font-size: 12px;
+  }
+  .cart-info small {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
