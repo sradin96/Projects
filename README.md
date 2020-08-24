@@ -19,3 +19,11 @@ Music Box is a website with 6 colorful buttons where a sound is played each time
 ## Perfume Store - Website
 
 Perfume Store - Website is a exam Project where i used Bootstrap and Angular to make a website. I designed the whole website with Bootstrap library and make all the functions with JavaScript. Login/Register works with Angular. User needs to login/register first if he wants to order an item.
+
+## E-Store-Website
+
+E-Store-Website is a small store project with some products and example of a shopping cart. 
+
+## Rock-Paper-Scissors Game
+
+Rock-Paper-Scissors Game is a game where user plays versus a computer.
