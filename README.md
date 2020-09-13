@@ -2,7 +2,8 @@
 
 ## PS4 Controller - Website
 
-In PS4 Controller - Website Project i used scss to style the whole website. Website is responsive and scales with screen size.
+In PS4 Controller - Website Project i used scss to style the whole website. Website is responsive and scales with screen size. 
+You can see the website on this link https://sradin96.github.io/PS4-Controller---Website/
 
 ## Snake Game - Thesis
 
@@ -23,13 +24,16 @@ Perfume Store - Website is a exam Project where i used Bootstrap and Angular to 
 ## E-Store-Website
 
 E-Store-Website is a small store project with some products and example of a shopping cart. 
+You can see the website on this link https://sradin96.github.io/E-Store-Website/
 
 ## Rock-Paper-Scissors Game
 
 Rock-Paper-Scissors Game is a game where user plays versus a computer.
+You can see the game on this link https://sradin96.github.io/Rock-Paper-Scissors-Game/
 
 ## Laptop-Website
 
-
-
 ## Todo Project
+
+Todo Project is a small website where you can add your todos to the list and remove them from the list. It saves your todos in local storage. You can even select to show you only finished todos or unfinished.
+You can see Todo Project on this link https://sradin96.github.io/Todo-List/
