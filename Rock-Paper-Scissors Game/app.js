@@ -29,7 +29,18 @@ function win(userChoice, compChoice) {
     ". You win!";
   document.getElementById(userChoice).classList.add("green-glow");
 
-  setTimeout(function () {
+  if (userScore === 3) {
+    result.innerHTML = "You won!";
+    setTimeout(function() {
+      document.getElementById("user-score").innerText = 0;
+      userScore = 0;
+      document.getElementById("comp-score").innerText = 0;
+      compScore = 0;
+      result.innerHTML = "Make your move!";
+    }, 1000);
+  }
+
+  setTimeout(function() {
     document.getElementById(userChoice).classList.remove("green-glow");
   }, 600);
 }
@@ -49,7 +60,18 @@ function lose(userChoice, compChoice) {
     ". You lost!";
   document.getElementById(userChoice).classList.add("red-glow");
 
-  setTimeout(function () {
+  if (compScore === 3) {
+    result.innerHTML = "Comp won!";
+    setTimeout(function() {
+      document.getElementById("user-score").innerText = 0;
+      userScore = 0;
+      document.getElementById("comp-score").innerText = 0;
+      compScore = 0;
+      result.innerHTML = "Make your move!";
+    }, 1000);
+  }
+
+  setTimeout(function() {
     document.getElementById(userChoice).classList.remove("red-glow");
   }, 600);
 }
@@ -68,7 +90,7 @@ function draw(userChoice, compChoice) {
     ". It's a draw!";
   document.getElementById(userChoice).classList.add("gray-glow");
 
-  setTimeout(function () {
+  setTimeout(function() {
     document.getElementById(userChoice).classList.remove("gray-glow");
   }, 600);
 }
@@ -95,13 +117,13 @@ function game(userChoices) {
 }
 
 function main() {
-  rock.addEventListener("click", function () {
+  rock.addEventListener("click", function() {
     game("rock");
   });
-  paper.addEventListener("click", function () {
+  paper.addEventListener("click", function() {
     game("paper");
   });
-  scissors.addEventListener("click", function () {
+  scissors.addEventListener("click", function() {
     game("scissors");
   });
 }
