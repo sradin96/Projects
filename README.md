@@ -15,15 +15,17 @@ Classical Snake Game.
 
 ## E-Store-Website
 
-E-Store-Website is a small store project with some products and example of a shopping cart. 
+E-Store-Website is a small responsive store project with some products and example of a shopping cart. 
 You can see the website on this link https://sradin96.github.io/E-Store-Website/
 
 ## Rock-Paper-Scissors Game
 
-Rock-Paper-Scissors Game is a game where user plays versus a computer.
+Rock-Paper-Scissors Game is a game where user plays rock, paper or scissors versus a computer. The game resets when one side gets score 3.
 You can see the game on this link https://sradin96.github.io/Rock-Paper-Scissors-Game/
 
 ## Laptop-Website
+
+Laptop-Website is a one page site with a navbar, text on the left side of the screen and a laptop picture of the right. Website is responsive and scales with screen size.
 
 ## Todo Project
 
