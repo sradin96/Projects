@@ -3,12 +3,17 @@
 ## PS4 Controller - Website
 
 In PS4 Controller - Website Project i used scss to style the whole website. Website is responsive and scales with screen size. 
-You can see the website on this link https://sradin96.github.io/PS4-Controller---Website/
+See the website on this link https://sradin96.github.io/PS4-Controller---Website/
 
 ## Photo App
 
 Photo App is a website where you can search for photos and download them if you want. It always shows 15 photos per page and if you click the button more, it adds more photos. You can search for a photo of a dog or a cat and it will show you only those photos. The project was made using an API.
-You can see the project on this link https://sradin96.github.io/Photo-App/
+See the project on this link https://sradin96.github.io/Photo-App/
+
+## Weather App
+
+Weather App is a website where you can search a city and see whats the temperature in celsius and if its sunny, clouds, fog or rain. The project was made using a weather API.
+See the website on this link https://sradin96.github.io/Weather-App/
 
 ## Snake Game - Thesis
 
@@ -21,12 +26,12 @@ Classical Snake Game.
 ## E-Store-Website
 
 E-Store-Website is a small responsive store project with some products and example of a shopping cart. 
-You can see the website on this link https://sradin96.github.io/E-Store-Website/
+See the website on this link https://sradin96.github.io/E-Store-Website/
 
 ## Rock-Paper-Scissors Game
 
 Rock-Paper-Scissors Game is a game where user plays rock, paper or scissors versus a computer. The game resets when one side gets score 3.
-You can see the game on this link https://sradin96.github.io/Rock-Paper-Scissors-Game/
+See the game on this link https://sradin96.github.io/Rock-Paper-Scissors-Game/
 
 ## Laptop-Website
 
@@ -35,7 +40,7 @@ Laptop-Website is a one page site with a navbar, text on the left side of the sc
 ## Todo Project
 
 Todo Project is a small website where you can add your todos to the list and remove them from the list. It saves your todos in local storage. You can even select to show you only finished todos or unfinished.
-You can see Todo Project on this link https://sradin96.github.io/Todo-List/
+See Todo Project on this link https://sradin96.github.io/Todo-List/
 
 ## Music Box
 
