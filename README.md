@@ -5,6 +5,11 @@
 In PS4 Controller - Website Project i used scss to style the whole website. Website is responsive and scales with screen size. 
 You can see the website on this link https://sradin96.github.io/PS4-Controller---Website/
 
+## Photo App
+
+Photo App is a website where you can search for photos and download them if you want. It always shows 15 photos per page and if you click the button more, it adds more photos. You can search for a photo of a dog or a cat and it will show you only those photos. The project was made using an API.
+You can see the project on this link https://sradin96.github.io/Photo-App/
+
 ## Snake Game - Thesis
 
 Snake Game - Thesis has its own levels and every time you pick up an apple, it has a mathematical question. It was intended to help kids learn while playing. It calculates random numbers that the program gives. With the game comes a login and register page with options.
