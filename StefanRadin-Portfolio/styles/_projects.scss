@@ -1,0 +1,32 @@
+.projects{
+    width: 80%;
+    margin: auto;
+    min-height: 85vh;
+    @include flex(space-between, center, row);
+    text-align: center;
+    flex-wrap: wrap;
+    h2{
+        margin: 5rem;
+    }
+    img{
+        object-fit: cover;
+        width: 80%;
+    }
+}
+
+.project{
+    flex: 1 1 55rem;
+}
+
+.projects-btn{
+    padding: 2rem;
+    .project-site-btn{
+        background: $gray-text;
+        color: white;
+        padding: 0.5rem 2rem;
+        border-radius: 2rem;
+    }
+    .project-code-btn{
+        padding-right: 5rem;
+    }
+}

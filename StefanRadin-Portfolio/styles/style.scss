@@ -1,0 +1,143 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.4rem;
+$gradient: linear-gradient(left, #38d39f, #38a4d3);
+$background-color:  #515151;
+$gray-text: #515151;
+
+@mixin flex($justify, $align, $direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@import "global";
+@import "intro";
+@import "projects";
+@import "contact";
+@import "footer";
+
+@media screen and (max-width: 1390px){
+    html{
+        font-size: 50%;
+    }   
+    svg{
+        width: 90%;
+        height: 100%;
+    }
+    nav{
+        width: 90%;
+        width: auto;
+    }
+    .intro-text h2{
+        font-size: 7rem;
+    }
+    .intro-text h3{
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width: 767px){
+    html{
+        font-size: 48%;
+    }
+    svg{
+        height: 60%;
+    }
+    .splash{
+        display: none;
+    }
+    .main-head{
+        width: 100%;
+    }
+    nav{
+        margin: 2rem;
+        margin: auto;
+        .logo{
+            @include flex(center, center, row);
+            flex: 1 1 20rem;
+            margin-top: 2rem;
+            img{
+                width: 6rem;
+            }
+        }
+        ul{
+            flex: 1 1 60rem;
+            margin: 2rem 0rem;
+        }
+        a{
+            font-size: 1.6rem;
+        }
+    }
+    .intro-text{
+        margin-top: 5rem;
+        text-align: center;
+        h2{
+            font-size: 6rem;
+        }
+        h3{
+            font-size: 3.5rem;
+        }
+        p{
+            font-size: 2.5rem;
+        }
+    }
+
+    .intro-images{
+        text-align: center;
+    }
+    
+    .intro-social{
+        @include flex(center, center, row);
+        a{
+            margin: 2rem;
+        }
+    }
+    .skills{
+        flex-direction: column-reverse;
+    }
+
+    .my-skills, .about-me{
+        text-align: center;
+    }
+
+    .skills-images, .about-images{
+        @include flex(center, center, row);
+    }
+    
+
+    .first-project, .second-project{
+        flex: 1 1 50rem;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .form{
+        padding: 0;
+        width: 100%;
+    }
+    footer{
+        h4{
+            font-size: 1.5rem;
+        }
+        li{
+            margin-right: 2rem;
+        }
+        a{
+            font-size: 1.5rem;
+        }
+    }
+    .project-site-btn, .project-code-btn{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 330px){
+    html{
+        font-size: 40%;
+    }
+}

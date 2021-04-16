@@ -1,0 +1,23 @@
+footer{
+    background: $background-color;
+    color: white;
+    min-height: 5vh;
+    padding: 0% 5%;
+    @include flex(flex-start, center, row);
+    ul{
+        flex: 1 1 40rem;
+        @include flex(space-around, center, row);
+    }
+    h4{
+        flex: 1 1 40rem;
+        font-size: 2rem;
+    }
+    a{
+        color: white;
+        font-size: 2rem;
+        @include flex(flex, center, center);
+        img{
+            padding-right: 1rem;
+        }
+    }
+}
