@@ -1,4 +1,4 @@
-<center># Projects</center>
+# <center>Projects</center>
 
 ## Password Generator
 
