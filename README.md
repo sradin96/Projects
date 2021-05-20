@@ -1,6 +1,4 @@
-<p align="center" font-size="30px" font-weight="bold">
-Projects
-</p>
+# Projects
 
 ## Password Generator
 
