@@ -1,0 +1,51 @@
+.coming-soon {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #7b2cbf;
+  }
+  .countdown {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 2em 0;
+  }
+
+  h3 {
+    color: #4d4751;
+  }
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    font-size: 2rem;
+    color: #4d4751;
+  }
+
+  img {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .coming-soon {
+    h1 {
+      font-size: 4rem;
+    }
+    .days,
+    .hours,
+    .minutes,
+    .seconds {
+      font-size: 2rem;
+    }
+    img {
+      width: 40%;
+    }
+  }
+}
