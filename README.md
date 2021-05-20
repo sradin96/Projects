@@ -1,5 +1,5 @@
-<p align="center">
-# Projects
+<p align="center" font-size="30px" font-weight="bold">
+Projects
 </p>
 
 ## Password Generator
