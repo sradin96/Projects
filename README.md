@@ -1,5 +1,7 @@
 # Projects
 
+https://sradin96.github.io/Internship-Stefan-Radin/
+
 ## Password Generator
 
 Password Generator lets you generate your password. You can choose if you want lower or upper letters, numbers and symbols. You can set the length from 2 to 30. Coding languages used: HTML, CSS and JavaScript to generate the password.
